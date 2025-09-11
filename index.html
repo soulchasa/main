@@ -6,8 +6,8 @@
 <title>영혼차사</title>
 <style>
 body {
-  background-color: #21211e;
-  color: #c9c9c9;
+  background: linear-gradient(to bottom, #303A21, #213432);
+  color: white;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -25,15 +25,14 @@ body {
 }
 
 .title {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .subtitle {
-  font-size: 16px;
-  font-weight: normal;
-  color: #8c8c8c;
+  font-size: 14px;
+  font-weight: 100;
 }
 
 .logo-placeholder {
@@ -57,28 +56,31 @@ body {
   width: 90%;
   padding: 15px;
   margin-bottom: 30px;
-  border-radius: 30px;
-  background-color: #7efc00;
+  border-radius: 15px;
+  background-color: #84F366;
   color: #000;
   text-align: center;
   font-weight: bold;
   font-size: 16px;
   cursor: pointer;
 }
+.no-wrap {
+  white-space: nowrap;
+}
 </style>
 </head>
 <body>
 
 <div class="text-container">
-  <div class="title">당신은 영혼을 수집하는 명을 받은 영혼차사입니다.</div>
-  <div class="subtitle">당신을 기다리고 있었어요!</div>
+  <div class="title"><span class="no-wrap">당신은 영혼을 수집하는 명을 받은 </span><br>영혼차사 입니다.</div>
+  <div class="subtitle"><span class="no-wrap">당신을 기다리고 있었어요!</span></div>
 </div>
 
 <div class="logo-placeholder">
 	<img src="./logo.png">
   </div>
 
-<div class="bottom-button">오늘의 관광 가이드 웹사이트 9월 중 오픈</div>
+<div class="bottom-button" onclick="window.open('https://korean.visitkorea.or.kr/main/main.do')">오늘의 관광 가이드 웹사이트 9월 중 오픈</div>
 
 </body>
 </html>
