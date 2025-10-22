@@ -2,8 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
 <title>영혼차사</title>
+
 <style>
 body {
   background: linear-gradient(to bottom, #303A21, #213432);
@@ -115,9 +116,31 @@ body {
 	<img class="breathing" src="./logo.png">
  </div>
  <br>
- 
+<div class="text-container">
+        안녕하세요, <span id="uidPlaceholder"></span>님.<br>
+        타입: <span id="tpPlaceholder"></span>
+</div>
 <div class="bottom-button" onclick="window.open('https://korean.visitkorea.or.kr/main/main.do')">오늘의 관광 가이드 웹사이트 9월 중 오픈</div>
 
+<script>
+	const params = new URLSearchParams(window.location.search);
+
+	// 파라미터 값 가져오기
+	const uid = params.get('uid') || '알 수 없음';
+	const tp = params.get('tp') || '미지정';
+
+	// 1. 값들을 삽입할 HTML 요소를 선택합니다.
+	const uidElement = document.getElementById('uidPlaceholder');
+	const tpElement = document.getElementById('tpPlaceholder');
+
+	// 2. 선택된 요소의 내용(textContent)을 파라미터 값으로 변경합니다.
+	if (uidElement) {
+	    uidElement.textContent = uid;
+	}
+	if (tpElement) {
+	    tpElement.textContent = tp;
+	}
+</script>
 </body>
 </html>
 
