@@ -1,1 +1,126 @@
+이전 버전
 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>영혼차사</title>
+<style>
+body {
+  background: linear-gradient(to bottom, #303A21, #213432);
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.text-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 100;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.logo-placeholder {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.logo-placeholder img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bottom-button {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  background-color: #84F366;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+	
+.no-wrap {
+  white-space: nowrap;
+}
+
+.breathing {
+  animation: breathe 4s infinite ease-in-out;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="text-container">
+  <div class="title"><span class="no-wrap">당신은 영혼을 수집하는 명을 받은 <br>영혼차사 입니다.</span></div>
+  <div class="subtitle"><span class="no-wrap">당신을 기다리고 있었어요!</span></div>
+</div>
+
+<div class="logo-placeholder">
+	<img class="breathing" src="./logo.png">
+ </div>
+ <br>
+ 
+<div class="bottom-button" onclick="window.open('https://korean.visitkorea.or.kr/main/main.do')">오늘의 관광 가이드 웹사이트 1월 중 오픈</div>
+
+</body>
+</html>
