@@ -1,227 +1,126 @@
-<!doctype html>
-<html lang="ko">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="robots" content="noindex" />
-        <title>영혼차사</title>
+이전 버전
 
-        <style>
-            body {
-              background: linear-gradient(to bottom, #0e1110, #141a17);
-              color: white;
-              font-family: Arial, sans-serif;
-              display: flex;
-              flex-direction: column;
-              justify-content: space-between;
-              align-items: center;
-              height: 100vh;
-              margin: 0;
-              padding-top: 20px;
-              box-sizing: border-box;
-            }
 
-            .image-container {
-              position: relative; /* 자식들이 이 박스를 기준으로 움직이게 함 */
-              width: 100%;       /* 원하는 박스 크기 */
-            }
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>영혼차사</title>
+<style>
+body {
+  background: linear-gradient(to bottom, #303A21, #213432);
+  color: white;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
 
-            .img-text {
-              max-width: 100%;  /* 부모 박스 너비를 넘지 않게 함 */
-              height: auto;     /* 가로 길이에 맞춰 세로 비율 유지 */
-              display: block;   /* 하단에 미세한 공백 제거 */
-              z-index: 2;
-              box-sizing: border-box;
-            }
+.text-container {
+  text-align: center;
+  margin-top: 50px;
+}
 
-            .img-back {
-              max-width: 100%;  /* 부모 박스 너비를 넘지 않게 함 */
-              height: auto;     /* 가로 길이에 맞춰 세로 비율 유지 */
-              display: block;   /* 하단에 미세한 공백 제거 */
-              z-index: 1;
-            }
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+}
 
-            .text-container {
-              text-align: center;
-              margin-top: 0px;
-            }
+.subtitle {
+  font-size: 14px;
+  font-weight: 100;
+  transform: translateY(20px);
+  animation: fadeUp 1s forwards;
+  animation-delay: 0.2s;
+  opacity: 0;
+}
 
-            .title {
-              font-size: 52px;
-              font-weight: bold;
-              margin-bottom: 30px;
-              transform: translateY(20px);
-              animation: fadeUp 1s forwards;
-            }
+.logo-placeholder {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
 
-            .subtitle {
-              font-size: 34px;
-              font-weight: bold;
-              transform: translateY(20px);
-              animation: fadeUp 1s forwards;
-              animation-delay: 0.2s;
-              opacity: 0;
-            }
+.logo-placeholder img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
 
-            .logo-placeholder {
-              width: 400px;
-              height: 400px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: auto;
-            }
+.bottom-button {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  background-color: #84F366;
+  color: #000;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+	
+.no-wrap {
+  white-space: nowrap;
+}
 
-            .logo-placeholder img {
-              max-width: 100%;
-              height: auto
-              display: block;
-            }
+.breathing {
+  animation: breathe 4s infinite ease-in-out;
+}
 
-            .bottom-button {
-              width: 90%;
-              padding: 25px;
-              margin-left: 25px;
-              bottom: 200px;
-              border-radius: 15px;
-              background-color: #84F366;
-              color: #000;
-              text-align: center;
-              font-weight: bold;
-              font-size: 36px;
-              cursor: pointer;
-              position: absolute;
-            }
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.07);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
 
-            .no-wrap {
-              white-space: nowrap;
-            }
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+</style>
+</head>
+<body>
 
-            .breathing {
-              animation: breathe 4s infinite ease-in-out;
-            }
+<div class="text-container">
+  <div class="title"><span class="no-wrap">당신은 영혼을 수집하는 명을 받은 <br>영혼차사 입니다.</span></div>
+  <div class="subtitle"><span class="no-wrap">당신을 기다리고 있었어요!</span></div>
+</div>
 
-            @keyframes breathe {
-              0% {
-                transform: scale(1);
-                opacity: 0.8;
-              }
-              50% {
-                transform: scale(1.07);
-                opacity: 1;
-              }
-              100% {
-                transform: scale(1);
-                opacity: 0.8;
-              }
-            }
+<div class="logo-placeholder">
+	<img class="breathing" src="./logo.png">
+ </div>
+ <br>
+ 
+<div class="bottom-button" onclick="window.open('https://korean.visitkorea.or.kr/main/main.do')">오늘의 관광 가이드 웹사이트 1월 중 오픈</div>
 
-            @keyframes fadeUp {
-              from {
-                opacity: 0;
-                transform: translateY(20px);
-              }
-              to {
-                opacity: 1;
-                transform: translateY(0);
-              }
-        </style>
-    </head>
-    <body>
-        <div class="text-container" style="padding-top: 300px">
-            <div class="title">
-                <span class="no-wrap">당신은 영혼을 수집하는 명을 받은 <br />영혼차사 입니다.</span>
-            </div>
-            <div class="subtitle"><span class="no-wrap" style="color: #aaff24">당신을 기다리고 있었어요!</span></div>
-        </div>
-
-        <div class="logo-placeholder" style="padding: 100px">
-            <img class="breathing" src="./logo.png" />
-        </div>
-        <br />
-
-        <div class="image-container">
-            <div style="position: absolute; padding-top: 500px; background-image: linear-gradient(to bottom, #111613, #15191C)">
-                <img
-                    class="img-text"
-                    style="padding-left: 100px; padding-right: 100px; padding-bottom: 50px"
-                    src="essets/%EC%9E%90%EC%82%B0%202.png" />
-                <img
-                    class="img-text"
-                    style="padding-left: 130px; padding-right: 130px"
-                    src="essets/%EC%9E%90%EC%82%B0%203.png" />
-                <img
-                class="img-text"
-                style="position: absolute; padding: 250px"
-                src="essets/%EC%9E%90%EC%82%B0%204.png" />
-            </div>
-            <img class="img-back" src="essets/%EC%9E%90%EC%82%B0%201.png" />
-        </div>
-        <div class="image-container">
-            <div style="position: absolute; margin-top: -300px">
-                <img
-                    class="img-text"
-                    style="padding-left: 100px; padding-right: 250px"
-                    src="essets/%EC%9E%90%EC%82%B0%207.png" />
-                <div style="margin-top: 100px">
-                    <img
-                        class="img-text"
-                        style="height: auto; position: absolute"
-                        src="essets/%EC%9E%90%EC%82%B0%208.png" />
-                    <img
-                        class="img-text"
-                        style="position: absolute; margin-top: 170px"
-                        src="essets/%EC%9E%90%EC%82%B0%209.png" />
-                </div>
-            </div>
-            <img class="img-back" src="essets/%EC%9E%90%EC%82%B0%205.png" />
-        </div>
-        <div class="image-container">
-            <div style="position: absolute; margin-top: -800px">
-                <img
-                    class="img-text"
-                    style="padding-left: 100px; padding-right: 250px"
-                    src="essets/%EC%9E%90%EC%82%B0%2011.png" />
-                <div style="margin-top: 100px">
-                    <img
-                        class="img-text"
-                        style="height: auto; position: absolute"
-                        src="essets/%EC%9E%90%EC%82%B0%208.png" />
-                    <img
-                        class="img-text"
-                        style="position: absolute; margin-top: 170px"
-                        src="essets/%EC%9E%90%EC%82%B0%2013.png" />
-                </div>
-            </div>
-            <img class="img-back" src="essets/%EC%9E%90%EC%82%B0%2010.png" />
-        </div>
-        <div class="image-container">
-            <div style="position: absolute; margin-top: -1400px">
-                <img
-                    class="img-text"
-                    style="padding-left: 100px; padding-right: 250px"
-                    src="essets/%EC%9E%90%EC%82%B0%2015.png" />
-                <div>
-                    <img
-                        class="img-text"
-                        style="position: absolute; padding: 170px"
-                        src="essets/%EC%9E%90%EC%82%B0%2016.png" />
-                </div>
-            </div>
-            <div style="position: relative; height: 1000px; overflow: hidden">
-                <img class="img-back" src="essets/%EC%9E%90%EC%82%B0%2014.png" />
-            </div>
-        </div>
-        <div class="image-container">
-            <div style="position: absolute; margin-top: -1400px">
-                <img
-                    class="img-text"
-                    style="position: absolute; margin-top: 750px; padding-left: 150px; padding-right: 150px"
-                    src="essets/%EC%9E%90%EC%82%B0%2019.png" />
-                <img class="img-back" style="mask-image: linear-gradient(to bottom, transparent 1px, black 5%);" src="essets/%EC%9E%90%EC%82%B0%2017%20-%20%EB%B3%B5%EC%82%AC%EB%B3%B8.png" />
-                <div class="bottom-button" onclick="window.open('https://korean.visitkorea.or.kr/main/main.do')">
-                    오늘의 관광 가이드 웹사이트 1월 중 오픈
-                </div>
-            </div>
-        </div>
-    </body>
+</body>
 </html>
